@@ -45,7 +45,7 @@ export function Hero() {
         </div>
         
         <motion.a
-          href="https://github.com/vexault"
+          href="https://github.com/vexault/vexault"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.05 }}
