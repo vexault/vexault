@@ -1,6 +1,7 @@
 "use client"
 
 import { Hero } from "@/components/hero"
+import { FairlaunchBanner } from "@/components/fairlaunch-banner"
 import { LiveStats } from "@/components/live-stats"
 import { AgentCards } from "@/components/agent-cards"
 import { Features } from "@/components/features"
@@ -19,6 +20,9 @@ export default function Home() {
       
       {/* Hero Section */}
       <Hero />
+      
+      {/* Fairlaunch Announcement */}
+      <FairlaunchBanner />
       
       {/* Live Stats Bar */}
       <div className="relative bg-gradient-to-b from-transparent via-white/[0.02] to-transparent">
