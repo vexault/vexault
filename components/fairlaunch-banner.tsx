@@ -156,7 +156,7 @@ export function FairlaunchBanner() {
             className="flex justify-center"
           >
             <a
-              href="https://bankr.bot"
+              href="https://bankr.bot/launches"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative inline-flex items-center gap-3"
