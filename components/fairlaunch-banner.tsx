@@ -119,13 +119,13 @@ export function FairlaunchBanner() {
                 }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
-                $VEXAULT
+                $VEVAULT
               </motion.span>
               {" "}Fairlaunch
             </h2>
             <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
               <span className="bg-gradient-to-r from-[#00ff9f] via-cyan-400 to-purple-500 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-                Coming Soon on Bankr.bot
+                Coming Soon on Flaunch
               </span>
             </p>
           </motion.div>
@@ -196,8 +196,8 @@ export function FairlaunchBanner() {
                 />
 
                 <Image
-                  src="/images/bankr-bot.jpg"
-                  alt="Bankr.bot Fairlaunch"
+                  src="/images/flaunch-logo.jpg"
+                  alt="Flaunch Fairlaunch"
                   width={600}
                   height={600}
                   className="w-full h-auto relative z-0"
@@ -239,7 +239,7 @@ export function FairlaunchBanner() {
             className="flex justify-center"
           >
             <motion.a
-              href="https://bankr.bot/launches"
+              href="https://flaunch.gg/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
@@ -258,7 +258,7 @@ export function FairlaunchBanner() {
               <div className="relative flex items-center gap-4 px-10 py-5 md:px-12 md:py-6 bg-gradient-to-r from-[#00ff9f] to-cyan-400 rounded-xl transition-all duration-300 group-hover:shadow-[0_0_60px_rgba(0,255,159,0.6)]">
                 <Rocket className="w-6 h-6 md:w-7 md:h-7 text-black group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 <span className="text-lg md:text-xl font-black text-black">
-                  Join Fairlaunch on Bankr.bot
+                  Join Fairlaunch on Flaunch
                 </span>
                 <ArrowRight className="w-6 h-6 text-black group-hover:translate-x-2 transition-transform" />
               </div>

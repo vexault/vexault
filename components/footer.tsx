@@ -57,18 +57,18 @@ export function Footer() {
             >
               <Image 
                 src="/images/vexault-logo.jpg" 
-                alt="Vexault" 
+                alt="Vevault" 
                 width={40} 
                 height={40}
                 className="rounded-lg shadow-lg"
               />
-              <span className="text-xl font-bold text-white">Vexault</span>
+              <span className="text-xl font-bold text-white">Vevault</span>
             </motion.div>
             <p className="text-sm text-white/50 mb-4 max-w-sm">
               Enterprise-grade sneaker arbitrage intelligence powered by autonomous AI agents.
             </p>
             <p className="text-xs text-white/30 font-mono">
-              $VEXAULT • Building the future of sneaker commerce
+              $VEVAULT • Building the future of sneaker commerce
             </p>
           </div>
           
@@ -106,7 +106,20 @@ export function Footer() {
                   GitHub
                 </motion.a>
               </li>
-              {["Twitter", "Telegram", "Support"].map((link) => (
+              <li>
+                <motion.a 
+                  href="https://x.com/vexaultDEV" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-white/50 hover:text-[#00ff9f] transition-colors inline-flex items-center gap-2 group"
+                  whileHover={{ x: 3 }}
+                >
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                  X (Twitter)
+                  <ArrowRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                </motion.a>
+              </li>
+              {["Telegram", "Support"].map((link) => (
                 <li key={link}>
                   <motion.a 
                     href="#" 
@@ -125,7 +138,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8 mt-8 border-t border-white/10">
           <p className="text-xs text-white/30">
-            © 2026 Vexault. All rights reserved.
+            © 2026 Vevault. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <a href="#" className="text-xs text-white/30 hover:text-white/60 transition-colors">

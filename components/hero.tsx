@@ -8,37 +8,41 @@ import { ChevronDown, ExternalLink } from "lucide-react"
 export function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col">
-      {/* Background effects */}
+      {/* Background effects - Premium violet/purple theme */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Grid pattern */}
+        {/* Subtle grid pattern */}
         <div 
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.02]"
           style={{
-            backgroundImage: `linear-gradient(#00ff9f 1px, transparent 1px), linear-gradient(90deg, #00ff9f 1px, transparent 1px)`,
-            backgroundSize: "60px 60px",
+            backgroundImage: `linear-gradient(rgba(139, 92, 246, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.5) 1px, transparent 1px)`,
+            backgroundSize: "80px 80px",
           }}
         />
         
-        {/* Radial gradients */}
-        <div className="absolute top-0 left-1/4 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-[#00ff9f]/10 rounded-full blur-[120px] md:blur-[150px] -translate-y-1/2" />
-        <div className="absolute top-1/4 right-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[#a855f7]/10 rounded-full blur-[120px] md:blur-[150px]" />
-        <div className="absolute bottom-0 left-0 w-[300px] md:w-[400px] h-[300px] md:h-[400px] bg-[#06b6d4]/10 rounded-full blur-[120px] md:blur-[150px] translate-y-1/2" />
+        {/* Premium radial gradients */}
+        <div className="absolute top-0 left-1/4 w-[500px] md:w-[800px] h-[500px] md:h-[800px] bg-violet-600/15 rounded-full blur-[150px] md:blur-[200px] -translate-y-1/2" />
+        <div className="absolute top-1/3 right-0 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-purple-500/10 rounded-full blur-[150px] md:blur-[180px]" />
+        <div className="absolute bottom-0 left-0 w-[350px] md:w-[500px] h-[350px] md:h-[500px] bg-cyan-500/10 rounded-full blur-[150px] md:blur-[180px] translate-y-1/2" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-violet-500/5 rounded-full blur-[200px]" />
       </div>
       
       {/* Navigation */}
-      <nav className="relative z-20 flex items-center justify-between px-4 sm:px-6 lg:px-8 py-4 max-w-7xl mx-auto w-full">
+      <nav className="relative z-20 flex items-center justify-between px-4 sm:px-6 lg:px-8 py-5 max-w-7xl mx-auto w-full">
         <motion.div 
           className="flex items-center gap-3"
           whileHover={{ scale: 1.02 }}
         >
-          <Image 
-            src="/images/vexault-logo.jpg" 
-            alt="Vexault" 
-            width={40} 
-            height={40}
-            className="rounded-lg shadow-lg"
-          />
-          <span className="text-xl font-bold text-white">Vexault</span>
+          <div className="relative">
+            <div className="absolute -inset-1 bg-gradient-to-r from-violet-600 to-cyan-500 rounded-xl blur-sm opacity-60" />
+            <Image 
+              src="/images/vexault-logo.jpg" 
+              alt="Vevault" 
+              width={42} 
+              height={42}
+              className="relative rounded-lg shadow-lg"
+            />
+          </div>
+          <span className="text-xl font-bold bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">Vevault</span>
         </motion.div>
         
         <div className="hidden md:flex items-center gap-8">
@@ -50,11 +54,11 @@ export function Hero() {
             <motion.a 
               key={link.href}
               href={link.href} 
-              className="text-sm text-white/60 hover:text-[#00ff9f] transition-colors relative group"
+              className="text-sm text-white/60 hover:text-violet-400 transition-colors relative group"
               whileHover={{ y: -2 }}
             >
               {link.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00ff9f] group-hover:w-full transition-all duration-300" />
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-violet-500 to-cyan-500 group-hover:w-full transition-all duration-300" />
             </motion.a>
           ))}
         </div>
@@ -63,9 +67,9 @@ export function Hero() {
           href="https://github.com/vexault/vexault"
           target="_blank"
           rel="noopener noreferrer"
-          whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(0, 255, 159, 0.5)' }}
+          whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(139, 92, 246, 0.5)' }}
           whileTap={{ scale: 0.95 }}
-          className="flex items-center gap-2 px-4 py-2.5 text-sm font-semibold text-black bg-[#00ff9f] rounded-lg shadow-lg transition-all duration-300"
+          className="flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-violet-600 to-violet-500 rounded-xl shadow-lg shadow-violet-500/25 transition-all duration-300"
         >
           <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
           <span className="hidden sm:inline">GitHub</span>
@@ -73,7 +77,7 @@ export function Hero() {
       </nav>
       
       {/* Hero content */}
-      <div className="relative z-10 flex-1 flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 px-4 sm:px-6 lg:px-8 py-8 md:py-12 max-w-7xl mx-auto w-full">
+      <div className="relative z-10 flex-1 flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16 px-4 sm:px-6 lg:px-8 py-8 md:py-12 max-w-7xl mx-auto w-full">
         {/* Left side - Text */}
         <div className="flex-1 text-center lg:text-left">
           <motion.div
@@ -86,40 +90,43 @@ export function Hero() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full border border-[#00ff9f]/30 bg-[#00ff9f]/10 backdrop-blur-sm"
-              whileHover={{ scale: 1.05, borderColor: 'rgba(0, 255, 159, 0.6)' }}
+              className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full border border-violet-500/30 bg-violet-500/10 backdrop-blur-sm"
+              whileHover={{ scale: 1.05, borderColor: 'rgba(139, 92, 246, 0.6)' }}
             >
               <motion.span 
-                className="w-2 h-2 rounded-full bg-[#00ff9f]"
+                className="w-2 h-2 rounded-full bg-violet-500"
                 animate={{ scale: [1, 1.3, 1], opacity: [1, 0.7, 1] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
               />
-              <span className="text-xs sm:text-sm font-mono text-[#00ff9f]">5 Agents Active</span>
+              <span className="text-xs sm:text-sm font-medium text-violet-300">5 AI Agents Online</span>
             </motion.div>
             
-            {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 text-balance">
-              <span className="text-white">Vexault</span>
-              <br />
-              <span className="bg-gradient-to-r from-[#00ff9f] via-[#06b6d4] to-[#a855f7] bg-clip-text text-transparent">
-                Enterprise Sneaker
-              </span>
-              <br />
-              <span className="text-white">Arbitrage Intelligence</span>
+            {/* Headline - Premium Typography */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.95] mb-6 tracking-tight">
+              <span className="text-white">Vevault</span>
             </h1>
             
+            {/* Tagline */}
+            <p className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6">
+              <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                Enterprise Sneaker Arbitrage Intelligence
+              </span>
+            </p>
+            
             {/* Subheadline */}
-            <p className="text-base sm:text-lg md:text-xl text-white/60 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed text-pretty">
+            <p className="text-base sm:text-lg md:text-xl text-white/50 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed font-light">
               Autonomous AI agents that monitor 1000+ retail endpoints, snipe profitable drops, and maximize resale profits in real-time.
             </p>
             
-            {/* CTA buttons - improved styling */}
+            {/* CTA buttons - Premium styling */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <motion.button
-                whileHover={{ scale: 1.05, boxShadow: '0 0 50px rgba(0, 255, 159, 0.6)' }}
-                whileTap={{ scale: 0.95 }}
-                className="group relative px-8 py-4 rounded-xl font-bold text-black bg-gradient-to-r from-[#00ff9f] to-cyan-400 shadow-lg shadow-[#00ff9f]/25 transition-all duration-300"
+                whileHover={{ scale: 1.03, boxShadow: '0 0 60px rgba(139, 92, 246, 0.5)' }}
+                whileTap={{ scale: 0.97 }}
+                className="group relative px-8 py-4 rounded-xl font-bold text-white overflow-hidden"
               >
+                <div className="absolute inset-0 bg-gradient-to-r from-violet-600 via-purple-600 to-violet-600 bg-[length:200%_100%] animate-gradient" />
+                <div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity" />
                 <span className="relative z-10 flex items-center justify-center gap-2 text-base">
                   Deploy Your Agent
                   <motion.span 
@@ -133,9 +140,9 @@ export function Hero() {
               </motion.button>
               
               <motion.button
-                whileHover={{ scale: 1.05, borderColor: '#a855f7', boxShadow: '0 0 30px rgba(168, 85, 247, 0.4)' }}
-                whileTap={{ scale: 0.95 }}
-                className="group px-8 py-4 rounded-xl font-bold text-white border-2 border-white/20 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
+                whileHover={{ scale: 1.03, borderColor: 'rgba(6, 182, 212, 0.6)', boxShadow: '0 0 40px rgba(6, 182, 212, 0.3)' }}
+                whileTap={{ scale: 0.97 }}
+                className="group px-8 py-4 rounded-xl font-bold text-white border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
               >
                 <span className="flex items-center justify-center gap-2">
                   Watch Demo
@@ -145,11 +152,11 @@ export function Hero() {
             </div>
             
             {/* Stats inline */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-6 md:gap-8 mt-10 pt-10 border-t border-white/10">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-8 md:gap-10 mt-12 pt-12 border-t border-white/5">
               {[
-                { value: "1,247+", label: "Retail Endpoints", color: "#00ff9f" },
-                { value: "$4.2M+", label: "Monthly Volume", color: "#a855f7" },
-                { value: "12ms", label: "Avg Response", color: "#06b6d4" },
+                { value: "1,247+", label: "Retail Endpoints", color: "from-violet-400 to-purple-400" },
+                { value: "$4.2M+", label: "Monthly Volume", color: "from-purple-400 to-pink-400" },
+                { value: "12ms", label: "Avg Response", color: "from-cyan-400 to-teal-400" },
               ].map((stat, index) => (
                 <motion.div 
                   key={stat.label}
@@ -159,10 +166,10 @@ export function Hero() {
                   whileHover={{ scale: 1.05 }}
                   className="text-center lg:text-left"
                 >
-                  <p className="text-xl sm:text-2xl font-bold font-mono" style={{ color: stat.color }}>
+                  <p className={`text-2xl sm:text-3xl font-bold font-mono bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
                     {stat.value}
                   </p>
-                  <p className="text-xs sm:text-sm text-white/50">{stat.label}</p>
+                  <p className="text-xs sm:text-sm text-white/40 mt-1">{stat.label}</p>
                 </motion.div>
               ))}
             </div>
@@ -192,7 +199,7 @@ export function Hero() {
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
         >
-          <ChevronDown className="w-5 h-5 text-[#00ff9f]" />
+          <ChevronDown className="w-5 h-5 text-violet-400" />
         </motion.div>
       </motion.div>
     </section>

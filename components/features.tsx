@@ -60,7 +60,7 @@ export function Features() {
           className="text-center mb-12 md:mb-16"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-            Why <span className="text-[#a855f7]">Vexault</span>
+            Why <span className="text-[#a855f7]">Vevault</span>
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto text-base md:text-lg">
             Enterprise-grade infrastructure built for serious sneaker arbitrage operations
