@@ -119,7 +119,7 @@ export function FairlaunchBanner() {
                 }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
-                $VEXAULT
+                $VEVAULT
               </motion.span>
               {" "}Fairlaunch
             </h2>

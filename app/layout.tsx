@@ -16,18 +16,18 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Vexault | Enterprise Sneaker Arbitrage Intelligence',
+  title: 'Vevault | Enterprise Sneaker Arbitrage Intelligence',
   description: 'Autonomous AI agents that monitor 1000+ retail endpoints, snipe profitable drops, and maximize resale profits in real-time.',
   keywords: ['sneaker', 'arbitrage', 'AI', 'automation', 'resale', 'drops', 'enterprise'],
-  authors: [{ name: 'Vexault' }],
+  authors: [{ name: 'Vevault' }],
   openGraph: {
-    title: 'Vexault | Enterprise Sneaker Arbitrage Intelligence',
+    title: 'Vevault | Enterprise Sneaker Arbitrage Intelligence',
     description: 'Autonomous AI agents that monitor 1000+ retail endpoints, snipe profitable drops, and maximize resale profits in real-time.',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Vexault | Enterprise Sneaker Arbitrage Intelligence',
+    title: 'Vevault | Enterprise Sneaker Arbitrage Intelligence',
     description: 'Autonomous AI agents that monitor 1000+ retail endpoints, snipe profitable drops, and maximize resale profits in real-time.',
   },
 }
